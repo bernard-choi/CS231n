@@ -20,3 +20,5 @@ plt.show()
 
 print(numerical_diff(function_1,5))
 print(numerical_diff(function_1,10))
+
+# numerical_gradient의 경우 연산속도가 매우 느리다. 뒤에서 배울 back_propagation과 비교할 예정
