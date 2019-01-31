@@ -18,7 +18,7 @@ plt.title("f(x) = 0.01*x^2 + 0.1*x")
 plt.plot(x,y)
 plt.show()
 
-print(numerical_diff(function_1,5))
-print(numerical_diff(function_1,10))
+print(numerical_diff(function_1,5)) # 0.19999999
+print(numerical_diff(function_1,10)) # 0.29999999
 
 # numerical_gradient의 경우 연산속도가 매우 느리다. 뒤에서 배울 back_propagation과 비교할 예정
