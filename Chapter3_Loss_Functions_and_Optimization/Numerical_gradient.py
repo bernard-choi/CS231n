@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-def numeircal_diff(f,x):
+def numerical_diff(f,x):
     h = 1e-4
     return (f(x+h) - f(x-h)) / (2*h)
 
