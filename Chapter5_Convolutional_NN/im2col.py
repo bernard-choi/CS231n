@@ -28,16 +28,16 @@ def im2col(input_data, filter_h, filter_w, stride = 1, pad = 0):
     return col
 
 # im2col 예시
-x1 = np.random.rand(1,3,7,7) # (데이터 수, 채널 수, 높이, 너비)
+x1 = np.random.rand(1,3,7,7)   # (데이터 수, 채널 수, 높이, 너비)
 col1 = im2col(x1,5,5,stride=1,pad=0)
-print(col1.shape) # (9, 75)
-                  # stride 1 이므로 가로3 세로3 9개의 헹, 한 행에 5X5X3개의 parameter
+print(col1.shape)              # (9, 75)
+                               # stride 1 이므로 가로3 세로3 9개의 헹, 한 행에 5X5X3개의 parameter
 
 # im2col 예시2
 x2 = np.random.rand(10,3,7,7,) # (데이터 수, 채널 수, 높이, 너비)
 col2 = im2col(x2, 5, 5, stride=1, pad = 0)
-print(col2.shape) # (90, 75)
-                  # 데이터 수 X 3 X 3 = 90
-                  # 5 X 5 X 3 = 75
+print(col2.shape)              # (90, 75)
+                               # 데이터 수 X 3 X 3 = 90
+                               # 5 X 5 X 3 = 75
 
 

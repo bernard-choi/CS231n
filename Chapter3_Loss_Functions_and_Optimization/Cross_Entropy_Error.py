@@ -1,6 +1,6 @@
 import numpy as np
 
-def cross_entropy_error(y, t): # t는 라벨
+def cross_entropy_error(y, t):                       # t는 라벨
     delta = 1e-7
     return -np.sum(t* np.log(y + delta))
 

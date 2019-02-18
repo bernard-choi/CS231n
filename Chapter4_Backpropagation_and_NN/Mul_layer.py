@@ -27,14 +27,14 @@ mul_tax_layer = MulLayer()
 apple_price = mul_apple_layer.forward(apple, apple_num)
 price = mul_tax_layer.forward(apple_price, tax)
 
-print(apple_price) # 200
-print(price) # 220
+print(apple_price)       # 200
+print(price)             # 220
 
 # 역전파
 dprice = 1
 dapple_price, dtax = mul_tax_layer.backward(dprice)
 dapple, dapple_num = mul_apple_layer.backward(dapple_price)
 
-print(dapple) # 2.2
-print(dapple_num) # 110
-print(dtax) # 200
+print(dapple)            # 2.2
+print(dapple_num)        # 110
+print(dtax)              # 200

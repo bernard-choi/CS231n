@@ -19,8 +19,8 @@ class Convolution:
         self.db = None
 
     def forward(self,x):
-        FN, C, FH, FW = self.w.shape # FN:필터개수, C:채널수, FH:필터높이, FW: 필터넓이
-        N, C, H, W = x.shape # N개의 데이터
+        FN, C, FH, FW = self.w.shape    # FN:필터개수, C:채널수, FH:필터높이, FW: 필터넓이
+        N, C, H, W = x.shape            # N개의 데이터
         out_h = int(1+(H+2*self.pad - FH) / self.stride)
         out_w = int(1+(W + 2*self.pad - FW) / self.stride)
 
@@ -46,8 +46,8 @@ class Convolution:
          return dx
 
 x = np.random.rand(1,3,32,32)
-w = np.random.rand(6,3,5,5) # 필터수 6개, 5X5
-b = np.random.rand(784,6) # 28*28 = 784
+w = np.random.rand(6,3,5,5)  # 필터수 6개, 5X5
+b = np.random.rand(784,6)    # 28*28 = 784
 
 conv = Convolution(w,b)
 print(conv.forward(x).shape) # (1, 6, 28, 28)

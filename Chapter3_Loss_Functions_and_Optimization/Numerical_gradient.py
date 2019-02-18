@@ -16,5 +16,5 @@ plt.title("f(x) = 0.01x^2 + 0.1x")
 plt.plot(x,y)
 plt.show()
 
-print(numerical_diff(function_1,5)) # 0.199999
+print(numerical_diff(function_1,5))  # 0.199999
 print(numerical_diff(function_1,10)) # 0.299999
